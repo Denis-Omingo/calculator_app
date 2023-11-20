@@ -3,6 +3,30 @@ const display_input=document.querySelector('.display .input');
 const display_output=document.querySelector('.display .output');
 const cursor=document.querySelector(' .cursor');
 
+/*Darl Mode Code*/
+document.addEventListener('DOMContentLoaded', function () {
+    const modeToggle = document.getElementById('modeToggle');
+    const calculator = document.querySelector('.calculator');
+
+    modeToggle.addEventListener('click', function () {
+        // Toggle dark mode class on calculator
+        calculator.classList.toggle('dark-mode');
+
+        // Save user's preference to localStorage
+        const isDarkMode = calculator.classList.contains('dark-mode');
+        localStorage.setItem('darkMode', isDarkMode);
+    });
+
+    // Check user's preference in localStorage on page load
+    const savedDarkMode = localStorage.getItem('darkMode');
+    if (savedDarkMode === 'true') {
+        calculator.classList.add('dark-mode');
+    }
+
+   
+});
+
+
 let input = "";
 
 for (let key of keys) {
