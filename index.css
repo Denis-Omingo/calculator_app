@@ -44,7 +44,11 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    background-color: #b0a7a7;
+    padding-top: .2rem;
+    padding-bottom: .2rem;
 }
+
 .calculator{
     background-color: #e76060;
     max-width: 375px;
@@ -72,19 +76,25 @@
     border:10px solid #33436b;
 }
 .dark-mode .display{
-    border:10px solid rgb(100, 99, 99);
+    border:10px solid black;
+    color: black;
+    background-color: #e2dddd;
 }
 .display .input {
     font-size: 1.25rem;
     margin-bottom: 0.5rem;
 }
 .display .cursor {
-    width: 3px;
+    width: 4px;
     font-size: 1.25rem;
     height: 10px;
     color: white;
     background-color: black;
     animation: blink 1s infinite;
+}
+.dark-mode .display .cursor {
+    color:rgb(31, 30, 30);
+    background-color: white;
 }
 
 @keyframes blink {
